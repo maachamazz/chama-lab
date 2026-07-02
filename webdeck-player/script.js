@@ -91,7 +91,9 @@ volumeButton.innerHTML = "<img src='./themes/" + myThemes[currentTheme] + "/imag
 var volumeBar = document.getElementById("volumeBar");
 var isSlidingVolumeBar = false;
 var videoButton = document.getElementById("videoButton");
-var isVideoShowing = true;
+// 初期状態は動画（YouTubeのサムネ）を非表示にして、音楽プレイヤーだけを見せる。
+// ユーザーは Video ボタンでいつでも表示に切り替えられる。
+var isVideoShowing = false;
 
 var logo = document.getElementById("playerLogo");
 logo.innerHTML = "<img src='./themes/" + myThemes[currentTheme] + "/logo.png' alt=''>";
@@ -348,6 +350,9 @@ function onPlayerReady(event) {
     loadCurrentPlaylist();
     player.setVolume(5);
     player.setLoop(true);
+    // YT.Player が div を iframe に差し替えた後にも初期の表示状態（動画は非表示）を反映する
+    var ytEl = document.getElementById("youtube-player");
+    if (ytEl) { ytEl.hidden = !isVideoShowing; }
     if (chamalabWantPlay) { try { player.playVideo(); } catch(err){} }
 }
 

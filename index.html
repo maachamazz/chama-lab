@@ -17,6 +17,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@300;400&family=Cinzel:wght@400;600&family=Share+Tech+Mono&family=VT323&family=Special+Elite&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'Block Ultimate';
+    src: url('fonts/BlockUltimate.otf') format('opentype');
+    font-display: swap;
+  }
   :root {
     --bg:      #07080d;
     --bg2:     #0b0c14;
@@ -33,7 +38,7 @@
     --text2:   #606880;
     --white:   #eef2f8;
     --glow:    rgba(60,100,180,0.18);
-    --mono:    'Share Tech Mono', monospace;
+    --mono:    'Block Ultimate', monospace;
   }
 
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -232,7 +237,7 @@
     position:relative; z-index:2; text-align:center;
   }
   .hero-title h1 {
-    font-family:'VT323', monospace;
+    font-family:'Block Ultimate', monospace;
     font-size:clamp(3rem,6vw,5rem);
     font-style:normal; font-weight:400;
     letter-spacing:0.14em; color:var(--white);
@@ -1090,7 +1095,7 @@
     position:absolute; bottom:0; left:0; right:0; z-index:2;
     padding:14px 16px;
     background:linear-gradient(to top, rgba(6,10,28,0.88) 0%, rgba(6,10,28,0.40) 55%, transparent 100%);
-    font-family:'VT323',monospace; font-size:1.8rem;
+    font-family:'Block Ultimate',monospace; font-size:1.8rem;
     color:var(--white); letter-spacing:0.07em;
     text-shadow:0 0 18px rgba(110,200,255,0.65);
     pointer-events:none;
@@ -1153,7 +1158,7 @@
   .back-btn:hover { background:rgba(60,90,160,0.4); color:var(--white); }
   .page-wrap { max-width:1100px; margin:0 auto; padding:20px 16px 40px; position:relative; z-index:2; display:flex; flex-direction:column; gap:16px; }
   .gallery-header { display:flex; align-items:center; gap:14px; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--border); }
-  .gallery-header-info h2 { font-family:'VT323',monospace; font-size:2rem; color:var(--white); letter-spacing:0.12em; text-shadow:0 0 20px rgba(60,100,200,0.4); }
+  .gallery-header-info h2 { font-family:'Block Ultimate',monospace; font-size:2rem; color:var(--white); letter-spacing:0.12em; text-shadow:0 0 20px rgba(60,100,200,0.4); }
   .gallery-header-info p { font-family:var(--mono); font-size:9px; letter-spacing:0.18em; color:var(--accent3); text-transform:uppercase; margin-top:3px; opacity:0.7; }
   .gallery-count { margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--text2); letter-spacing:0.1em; }
   .gallery-count span { color:var(--accent3); font-size:15px; }
@@ -1200,7 +1205,7 @@
   /* Char profile */
   .char-profile { border:1px solid var(--border); background:rgba(10,14,28,0.7); padding:14px 16px; position:relative; }
   .char-profile::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--accent2),transparent); opacity:0.35; }
-  .char-profile-name { font-family:'VT323',monospace; font-size:1.7rem; color:var(--white); letter-spacing:0.1em; text-shadow:0 0 20px rgba(60,100,200,0.4); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border2); }
+  .char-profile-name { font-family:'Block Ultimate',monospace; font-size:1.7rem; color:var(--white); letter-spacing:0.1em; text-shadow:0 0 20px rgba(60,100,200,0.4); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border2); }
   .char-profile-label { font-family:var(--mono); font-size:8px; letter-spacing:0.18em; color:var(--accent3); text-transform:uppercase; margin:10px 0 6px; opacity:0.7; }
   .char-profile-table { width:100%; border-collapse:collapse; }
   .char-profile-table tr { border-bottom:1px solid var(--border); }
@@ -1325,7 +1330,7 @@
     box-shadow:inset 0 0 24px rgba(60,100,180,0.10);
   }
   .mp-track-title {
-    font-family:'VT323',monospace; font-size:1.4rem;
+    font-family:'Block Ultimate',monospace; font-size:1.4rem;
     color:var(--white); letter-spacing:0.1em;
     text-shadow:0 0 14px rgba(60,100,200,0.5);
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
@@ -1712,7 +1717,7 @@
   }
   .welcome-art img { width:100%; height:100%; object-fit:cover; }
   .welcome-heading {
-    font-family:'VT323',monospace; font-size:2rem; color:var(--white);
+    font-family:'Block Ultimate',monospace; font-size:2rem; color:var(--white);
     letter-spacing:0.1em; text-shadow:0 0 24px rgba(110,200,255,0.6);
   }
   .welcome-kaomoji { font-family:var(--mono); font-size:12px; color:var(--bright); margin-top:4px; letter-spacing:0.1em; }
@@ -1789,7 +1794,7 @@
     margin-bottom:8px;
   }
   .cal-month {
-    font-family:'VT323',monospace; font-size:1.15rem;
+    font-family:'Block Ultimate',monospace; font-size:1.15rem;
     color:var(--bright2); letter-spacing:0.12em;
     text-shadow:0 0 10px rgba(110,200,255,0.4);
   }
@@ -1981,7 +1986,7 @@
     box-shadow:inset 0 0 24px rgba(110,200,255,0.08);
   }
   .au-banner h3 {
-    font-family:'VT323',monospace; font-size:1.9rem;
+    font-family:'Block Ultimate',monospace; font-size:1.9rem;
     color:var(--white); letter-spacing:0.1em;
     text-shadow:0 0 22px rgba(110,200,255,0.6);
   }
@@ -2018,7 +2023,7 @@
   .dotd .cheki-img { width:220px; height:220px; }
   .dotd-info { font-size:12.5px; color:var(--text); line-height:2; }
   .dotd-info .dotd-title {
-    font-family:'VT323',monospace; font-size:1.5rem; color:var(--white);
+    font-family:'Block Ultimate',monospace; font-size:1.5rem; color:var(--white);
     letter-spacing:0.08em; margin-bottom:4px;
     text-shadow:0 0 14px rgba(110,200,255,0.5);
   }
