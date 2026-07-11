@@ -1754,6 +1754,8 @@
   }
   .panel-titlebar span:last-child { opacity:0.6; letter-spacing:3px; }
   .welcome-body { padding:26px 24px 24px; text-align:center; }
+  .welcome-body a.welcome-link { color:var(--accent3); text-decoration:underline; text-underline-offset:2px; }
+  .welcome-body a.welcome-link:hover { color:var(--bright2); }
   .welcome-art {
     width:120px; height:120px; margin:0 auto 16px;
     border:1px dashed var(--border2); border-radius:6px;
@@ -2366,9 +2368,10 @@
         <div class="welcome-heading">WELCOME TO CHAMALAB</div>
         <div class="welcome-kaomoji">˗ˋˏ ♡ ˎˊ˗</div>
         <div class="welcome-kaomoji"><span class="i18n-ja">設立日：2026年6月12日</span><span class="i18n-en">Founded: June 12, 2026</span></div>
-        <div class="welcome-kaomoji"><span class="i18n-ja">ちゃまのラボへようこそ！このサイトはポートフォリオとして作ったものだったのですが、マスターの好奇心によってラボとなりました。</span><span class="i18n-en">Welcome to Chama's Lab! This site started out as a portfolio, but thanks to the master's curiosity, it became a lab.</span></div>
-        <div class="welcome-kaomoji"><span class="i18n-ja">その名の通りラボなので興味があるものを共有したり、サイトで遊べるものを入れたり色々詰め込んでます</span><span class="i18n-en">True to its name, it's a lab — I share things I'm interested in, add things you can play with on the site, and pack in all kinds of stuff.</span></div>
-        <div class="welcome-kaomoji"><span class="i18n-ja">このサイトの閲覧はPCが推奨されます。モバイルだと見れないタブがあるので...</span><span class="i18n-en">Viewing this site on PC is recommended. Some tabs aren't viewable on mobile...</span></div>
+        <div class="welcome-kaomoji"><span class="i18n-ja">ちゃまのラボへようこそ！このサイトはポートフォリオとして作ったものだったのですが、マスターの好奇心によってラボとなりました。</span><span class="i18n-en">Welcome to Chama's Lab! This site was originally created as a portfolio, but it has transformed into a lab due to the master's curiosity.</span></div>
+        <div class="welcome-kaomoji"><span class="i18n-ja">その名の通りラボなので興味があるものを共有したり、サイトで遊べるものを入れたり色々詰め込んでます</span><span class="i18n-en">As the name suggests, it is a lab, so I have packed it with various things like sharing what I'm interested in and including interactive elements to play with on the site.</span></div>
+        <div class="welcome-kaomoji"><span class="i18n-ja">このサイトの閲覧はPCが推奨されます。モバイルだと表示が崩れる場合がので...</span><span class="i18n-en">This site is best viewed on a PC. It might not look right on mobile.</span></div>
+        <div class="welcome-kaomoji"><span class="i18n-ja">ご質問などは<a href="mailto:chama.zzz58@gmail.com" class="welcome-link">こちら</a>に、お仕事のご連絡は<a href="mailto:scrmw0rks@gmail.com" class="welcome-link">こちら</a>に、ご依頼についての詳細や料金表は右側のタブもしくは一番下に記載されてます。</span><span class="i18n-en">For questions, please contact me <a href="mailto:chama.zzz58@gmail.com" class="welcome-link">here</a>. For business inquiries, please reach out <a href="mailto:scrmw0rks@gmail.com" class="welcome-link">here</a>. Details regarding requests and the price list can be found in the tab on the right or at the bottom of the page.</span></div>
         <div class="welcome-kaomoji"><span class="i18n-ja">ブログは製作中です..!</span><span class="i18n-en">The blog is under construction..!</span></div>
       </div>
     </div>
@@ -2881,7 +2884,7 @@
           </div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this,{ja:'タイトル',en:'Title'},'ろあ様','✨')">
-          <div class="gallery-img"><img src="images/mychar/skeb03.jpg" alt="Skeb commission #02"></div>
+          <div class="gallery-img"><img src="images/mychar/skeb03.jpg" alt="Skeb commission #03"></div>
           <div class="gallery-hover-overlay"><div class="gallery-hover-text">View</div></div>
           <div class="gallery-item-info">
             <div class="gallery-item-title">ろあ様</div>
@@ -2889,10 +2892,18 @@
           </div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this,{ja:'タイトル',en:'Title'},'えびみりん様','✨')">
-          <div class="gallery-img"><img src="images/mychar/skeb04.jpg" alt="Skeb commission #02"></div>
+          <div class="gallery-img"><img src="images/mychar/skeb04.jpg" alt="Skeb commission #04"></div>
           <div class="gallery-hover-overlay"><div class="gallery-hover-text">View</div></div>
           <div class="gallery-item-info">
             <div class="gallery-item-title">えびみりん様</div>
+            <div class="gallery-item-sub">Skeb</div>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this,{ja:'タイトル',en:'Title'},'ゴンゾィーナ様','✨')">
+          <div class="gallery-img"><img src="images/mychar/skeb05.jpg" alt="Skeb commission #05"></div>
+          <div class="gallery-hover-overlay"><div class="gallery-hover-text">View</div></div>
+          <div class="gallery-item-info">
+            <div class="gallery-item-title">ゴンゾィーナ様</div>
             <div class="gallery-item-sub">Skeb</div>
           </div>
         </div>
@@ -3003,12 +3014,26 @@
             <div class="hw-card" onclick="openLightbox(this,{ja:'Kiiza様　一枚絵',en:'Kiiza-sama — single illustration'},'','📐')">
               <img src="images/work/08.jpg" alt="Kiiza様">
               <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">Kiiza様　一枚絵</span><span class="i18n-en">Kiiza-sama — single illustration</span></div></div>
-            </div><div class="hw-card" onclick="openLightbox(this,{ja:'Kiiza様　一枚絵',en:'Kiiza-sama — single illustration'},'','📐')">
+            </div>
+            <div class="hw-card" onclick="openLightbox(this,{ja:'健康に気を遣いたい女様　一枚絵',en:'Health-conscious woman — single illustration'},'','📐')">
               <img src="images/work/09.jpg" alt="健康に気を遣いたい女様">  
-              <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">健康に気を遣いたい女様　一枚絵</span><span class="i18n-en">健康に気を遣いたい女様 — single illustration</span></div></div>
-            </div><div class="hw-card" onclick="openLightbox(this,{ja:'Kiiza様　一枚絵',en:'Kiiza-sama — single illustration'},'','📐')">
+              <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">健康に気を遣いたい女様　一枚絵</span><span class="i18n-en">Health-conscious woman — single illustration</span></div></div>
+            </div>
+            <div class="hw-card" onclick="openLightbox(this,{ja:'個人様　一枚絵',en:'Private Client — single illustration'},'','📐')">
               <img src="images/work/10.jpg" alt="個人様">  
               <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">個人様　一枚絵</span><span class="i18n-en">Private Client — single illustration</span></div></div>
+            </div>
+            <div class="hw-card" onclick="openLightbox(this,{ja:'個人様　一枚絵',en:'Private Client — single illustration'},'','📐')">
+              <img src="images/work/11.jpg" alt="個人様">  
+              <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">個人様　一枚絵</span><span class="i18n-en">Private Client — single illustration</span></div></div>
+            </div>
+            <div class="hw-card" onclick="openLightbox(this,{ja:'Hoshizuki様　一枚絵',en:'Hoshizuki-sama — single illustration'},'','📐')">
+              <img src="images/work/12.jpg" alt="Hoshizuki様">  
+              <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">Hoshizuki様　一枚絵</span><span class="i18n-en">Hoshizuki-sama — single illustration</span></div></div>
+            </div>
+            <div class="hw-card" onclick="openLightbox(this,{ja:'Rui様　一枚絵',en:'Rui-sama — single illustration'},'','📐')">
+              <img src="images/work/13.jpg" alt="Rui様">  
+              <div class="gallery-hover-overlay"><div class="gallery-hover-text"><span class="i18n-ja">Rui様　一枚絵</span><span class="i18n-en">Rui-sama — single illustration</span></div></div>
             </div>
           </div>
         </div>
