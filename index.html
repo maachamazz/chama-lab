@@ -1836,51 +1836,6 @@
   .welcome-card .welcome-body { padding:22px 24px; }
   .welcome-card .welcome-msg { text-align:center; }
 
-  /* ═══ CALENDAR ═══ */
-  .cal-head {
-    display:flex; align-items:center; justify-content:space-between;
-    margin-bottom:8px;
-  }
-  .cal-month {
-    font-family:'Block Ultimate',monospace; font-size:1.15rem;
-    color:var(--bright2); letter-spacing:0.12em;
-    text-shadow:0 0 10px rgba(110,200,255,0.4);
-  }
-  .cal-nav-btn {
-    background:rgba(60,90,160,0.25); border:1px solid var(--border2);
-    color:var(--bright); font-family:var(--mono); font-size:10px;
-    padding:2px 9px; cursor:pointer; border-radius:3px; transition:all 0.2s;
-  }
-  .cal-nav-btn:hover { border-color:var(--bright); color:var(--white); }
-  .cal-grid {
-    display:grid; grid-template-columns:repeat(7,1fr); gap:2px;
-    font-family:var(--mono); text-align:center;
-  }
-  .cal-dow { font-size:8px; color:var(--text2); letter-spacing:0.08em; padding:3px 0; }
-  .cal-dow.sun { color:#ff8d8d; } .cal-dow.sat { color:var(--bright); }
-  .cal-day {
-    font-size:10px; color:var(--text); padding:5px 0;
-    border-radius:3px; position:relative;
-  }
-  .cal-day.dim { opacity:0.22; }
-  .cal-day.today {
-    background:rgba(110,200,255,0.25); color:var(--white);
-    border:1px solid var(--bright);
-    box-shadow:0 0 8px rgba(110,200,255,0.35);
-  }
-  .cal-day.event::after {
-    content:''; position:absolute; left:50%; bottom:1px; transform:translateX(-50%);
-    width:4px; height:4px; border-radius:50%;
-    background:#3aff9a; box-shadow:0 0 5px #3aff9a;
-  }
-  .cal-events { margin-top:10px; border-top:1px dashed var(--border); padding-top:8px; }
-  .cal-event-row {
-    display:flex; gap:8px; font-size:10.5px; line-height:1.9;
-    font-family:var(--mono); color:var(--text);
-  }
-  .cal-event-date { color:#3aff9a; white-space:nowrap; }
-  .cal-noevent { font-family:var(--mono); font-size:9.5px; color:var(--text2); }
-
   /* ═══ 一言送信ボックス (QUICK MESSAGE) ═══ */
   .qmsg-form { display:flex; flex-direction:column; gap:8px; }
   .qmsg-input {
@@ -2342,7 +2297,7 @@
       </div><div class="panel" id="music-home">
         <div class="panel-title">Music</div>
         <div class="webdeck-frame-wrap mini" style="margin:0 auto;">
-          <iframe id="webdeck-iframe" src="webdeck-player/index.html" title="Webdeck Player" allow="autoplay; encrypted-media"></iframe>
+          <iframe id="webdeck-iframe" src="webdeck-player/index.html?v=20260722" title="Webdeck Player" allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="db-row" style="margin-top:10px;justify-content:center;">
           <button class="db-btn" onclick="window.open('webdeck-player/index.html','Web Deck Player','height=260, width=620')"><span class="i18n-ja">↗ 別ウィンドウで開く</span><span class="i18n-en">↗ Open in new window</span></button>
@@ -2514,7 +2469,7 @@
     </div>
 
 
-    <!-- ═══ INFO (モバイル専用アコーディオン: Commission / Calendar / Schedule / 販売中モデル) ═══ -->
+    <!-- ═══ INFO (モバイル専用アコーディオン: Commission / Schedule / 販売中モデル) ═══ -->
     <div class="panel mobile-only-panel">
       <div class="panel-title">INFO</div>
       <div class="accordion" id="mobile-info-accordion">
@@ -2546,15 +2501,6 @@
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="acc-item">
-          <button type="button" class="acc-header" onclick="toggleAccordion(this)">
-            <span>Calendar</span><span class="acc-arrow">▾</span>
-          </button>
-          <div class="acc-body">
-            <div class="cal-mount"><div class="cal-head"><button class="cal-nav-btn" onclick="calMove(-1)">◀</button><div class="cal-month">2026.07</div><button class="cal-nav-btn" onclick="calMove(1)">▶</button></div><div class="cal-grid"><div class="cal-dow sun">SUN</div><div class="cal-dow">MON</div><div class="cal-dow">TUE</div><div class="cal-dow">WED</div><div class="cal-dow">THU</div><div class="cal-dow">FRI</div><div class="cal-dow sat">SAT</div><div class="cal-day dim"></div><div class="cal-day dim"></div><div class="cal-day dim"></div><div class="cal-day event">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day today">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div><div class="cal-day">31</div></div><div class="cal-events"><div class="cal-event-row"><span class="cal-event-date">01日</span><span>コミッション受付 再開(▲)</span></div></div></div>
           </div>
         </div>
 
@@ -2678,11 +2624,6 @@
         </div>
 
       </div>
-    </div>
-
-    <div class="panel">
-      <div class="panel-title">Calendar</div>
-      <div class="cal-mount"><div class="cal-head"><button class="cal-nav-btn" onclick="calMove(-1)">◀</button><div class="cal-month">2026.07</div><button class="cal-nav-btn" onclick="calMove(1)">▶</button></div><div class="cal-grid"><div class="cal-dow sun">SUN</div><div class="cal-dow">MON</div><div class="cal-dow">TUE</div><div class="cal-dow">WED</div><div class="cal-dow">THU</div><div class="cal-dow">FRI</div><div class="cal-dow sat">SAT</div><div class="cal-day dim"></div><div class="cal-day dim"></div><div class="cal-day dim"></div><div class="cal-day event">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day today">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div><div class="cal-day">31</div></div><div class="cal-events"><div class="cal-event-row"><span class="cal-event-date">01日</span><span>コミッション受付 再開(▲)</span></div></div></div>
     </div>
 
     <div class="panel">
@@ -3330,6 +3271,11 @@
     log:'LOG', music:'MUSIC', mail:'MAIL', drawbox:'DRAWBOX'
   };
 
+  // ── ディープリンク用: ビューID ⇄ URLハッシュ の対応 ──
+  // この状態でURLをコピー→貼り付けると、同じタブが開いた状態で表示される
+  const VIEW_HASHES = { all:'gallery', mychar:'my-character', about:'about', log:'log', mail:'mail', drawbox:'drawbox' };
+  const HASH_TO_VIEW = Object.fromEntries(Object.entries(VIEW_HASHES).map(function(e){ return [e[1], e[0]]; }));
+
   function showGallery(id) {
     document.getElementById('home-view').style.display = 'none';
     document.querySelectorAll('.gallery-view').forEach(v => v.style.display = 'none');
@@ -3337,6 +3283,13 @@
     document.getElementById('browser-url').textContent = '✦ CHAMALAB / ' + (PAGE_LABELS[id] || id.toUpperCase());
     document.getElementById('gallery-back-btn').style.display = '';
     document.getElementById('browser-reload').style.display = 'none';
+    // 対応するナビタブをアクティブにする
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    const navTab = navTabForView(id);
+    if (navTab) navTab.classList.add('active');
+    // URLハッシュを更新（この状態でリンクをコピーすると同じタブが開く）
+    const slug = VIEW_HASHES[id];
+    if (slug && location.hash !== '#' + slug) history.replaceState(null, '', '#' + slug);
     if (window.updateHwScrollCues) window.updateHwScrollCues();
     window.scrollTo(0, 0);
   }
@@ -3350,7 +3303,19 @@
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
     const homeTab = document.querySelector('.nav-tab[href="#top"]');
     if (homeTab) homeTab.classList.add('active');
+    // ホームはハッシュ無し（コピーしたリンクがギャラリーを引きずらないように）
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     window.scrollTo(0, 0);
+  }
+
+  // ビューID → 対応するナビタブ要素（onclick属性から判定）
+  function navTabForView(id) {
+    const sigs = { all:"showgallery('all')", mychar:"showgallery('mychar')", about:"showgallery('about')", log:"showpage('log'", mail:"showpage('mail'", drawbox:"showpage('drawbox'" };
+    const sig = sigs[id];
+    if (!sig) return null;
+    return [...document.querySelectorAll('.nav-tab')].find(function(t){
+      return (t.getAttribute('onclick') || '').toLowerCase().replace(/\s+/g, '').includes(sig);
+    }) || null;
   }
 
   // ── GALLERY LIGHTBOX ──
@@ -3655,13 +3620,32 @@ const DRAWBOX_API_URL = 'https://script.google.com/macros/s/AKfycbw336zpYOTpdkux
 Object.assign(GALLERY_URLS, { log:'update-log', music:'music', mail:'mail', drawbox:'drawbox' });
 
 function showPage(id, el) {
-  showGallery(id);
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  if (el && el.classList.contains('nav-tab')) el.classList.add('active');
+  showGallery(id);   // ビュー・アクティブタブ・URLハッシュはここで揃う
+  if (el && el.classList.contains('nav-tab')) {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+  }
   // モバイルのサイドバーが開いていたら閉じる
   const sb = document.getElementById('main-sidebar');
   if (sb && sb.classList.contains('open')) closeSidebar();
 }
+
+// ═══ DEEP LINK: URLハッシュから表示するタブを復元 ═══
+// 例: chamalab.net/#gallery を開くとギャラリータブが開いた状態になる
+function routeFromHash() {
+  const h = (location.hash || '').replace(/^#/, '');
+  if (!h || h === 'top') {
+    // ハッシュ無し → ホームへ（ギャラリーが開いていた場合のみ戻す）
+    if (document.getElementById('home-view').style.display === 'none') showHome();
+    return;
+  }
+  const id = HASH_TO_VIEW[h];
+  if (id && document.getElementById('gallery-' + id)) showGallery(id);
+}
+// URLを手で書き換えた/戻る進むした場合にも追従
+window.addEventListener('hashchange', routeFromHash);
+// ページ読み込み時に一度だけ復元（ウェルカムポップアップの裏側で正しいビューを用意）
+routeFromHash();
 
 
 // ═══ CUSTOM CURSOR (PCのみ) ═══
@@ -3909,13 +3893,12 @@ initDrawbox('-tab');
 // 'session' = ブラウザを閉じるまで1回 / 'once' = その端末で最初の1回だけ / 'always' = 毎回
 const WELCOME_MODE = 'always';
 
-// ── カレンダーの予定 (手動で書き込み) ──
-// 形式: '年-月-日(2桁)': { ja:'内容(日本語)', en:'内容(English)' },
-const CAL_EVENTS = {
-  '2026-06-12': { ja:'サイトリニューアル!', en:'Site renewal!' },
-  '2026-07-01': { ja:'コミッション受付 再開(▲)', en:'Commissions reopen (▲)' },
-  '2026-08-01': { ja:'コミッション受付 ○', en:'Commissions open (○)' },
-};
+// ── ウェルカムポップアップの ON/OFF（一時的に消したいとき用）──
+// true  = 表示する（通常）
+// false = 表示しない（＝BGMの自動再生も止まる。音楽プレイヤー自体は表示されたまま無音）
+// ★元に戻すときは false → true に書き換えるだけ★
+const WELCOME_ENABLED = false;
+
 
 /* ╔═══════════════════════════════════════╗
    ║  設定エリア2 ここまで                    ║
@@ -3928,6 +3911,7 @@ const CAL_EVENTS = {
   if (!ov) return;
   const KEY = 'chamalab_welcomed';
   let show = true;
+  if (!WELCOME_ENABLED) show = false;   // ← 一時オフ用スイッチ
   if (WELCOME_MODE === 'session' && sessionStorage.getItem(KEY)) show = false;
   if (WELCOME_MODE === 'once' && localStorage.getItem(KEY)) show = false;
   if (show) {
@@ -3954,7 +3938,6 @@ function applyLang(lang){
   document.querySelectorAll('[data-ph-ja]').forEach(function(el){
     el.placeholder = lang === 'en' ? (el.getAttribute('data-ph-en') || el.placeholder) : el.getAttribute('data-ph-ja');
   });
-  if (window.renderCalendar) window.renderCalendar();
   if (window.initQmsgBoxes) window.initQmsgBoxes();
 }
 function closeWelcome(){
@@ -4051,51 +4034,6 @@ function closeWelcome(){
   update();
 })();
 
-
-// ═══ CALENDAR ═══
-(function(){
-  const mounts = document.querySelectorAll('.cal-mount');
-  if (mounts.length === 0) return;
-  let view = new Date(); view.setDate(1);
-
-  function render(){
-    const y = view.getFullYear(), m = view.getMonth();
-    const today = new Date();
-    const first = new Date(y, m, 1).getDay();
-    const days = new Date(y, m + 1, 0).getDate();
-    const monthStr = y + '-' + String(m + 1).padStart(2, '0');
-    const names = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-
-    let html = '<div class="cal-head">'
-      + '<button class="cal-nav-btn" onclick="calMove(-1)">◀</button>'
-      + '<div class="cal-month">' + y + '.' + String(m+1).padStart(2,'0') + '</div>'
-      + '<button class="cal-nav-btn" onclick="calMove(1)">▶</button></div>';
-    html += '<div class="cal-grid">';
-    names.forEach((n,i) => html += '<div class="cal-dow' + (i===0?' sun':i===6?' sat':'') + '">' + n + '</div>');
-    for (let i = 0; i < first; i++) html += '<div class="cal-day dim"></div>';
-    for (let d = 1; d <= days; d++) {
-      const key = monthStr + '-' + String(d).padStart(2,'0');
-      const isToday = (y === today.getFullYear() && m === today.getMonth() && d === today.getDate());
-      html += '<div class="cal-day' + (isToday?' today':'') + (CAL_EVENTS[key]?' event':'') + '">' + d + '</div>';
-    }
-    html += '</div>';
-
-    // 今月の予定リスト
-    const evs = Object.keys(CAL_EVENTS).filter(k => k.startsWith(monthStr)).sort();
-    html += '<div class="cal-events">';
-    if (evs.length === 0) html += '<div class="cal-noevent">— ' + t('今月の予定はありません', 'No events this month') + ' —</div>';
-    else evs.forEach(k => {
-      html += '<div class="cal-event-row"><span class="cal-event-date">' + t(k.slice(8) + '日', k.slice(8)) + '</span><span>' + t(CAL_EVENTS[k].ja, CAL_EVENTS[k].en) + '</span></div>';
-    });
-    html += '</div>';
-
-    mounts.forEach(el => el.innerHTML = html);
-  }
-
-  window.calMove = dir => { view.setMonth(view.getMonth() + dir); render(); };
-  window.renderCalendar = render;
-  render();
-})();
 
 
 // ═══ 一言送信ボックス ═══

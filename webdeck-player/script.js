@@ -28,7 +28,7 @@
       例: https://www.youtube.com/playlist?list=PLxxxx → PLxxxx の部分
    3. 下の形式で書き換え・追加する                              */
 var myPlaylists = {
-    "BGM": ['gVxsLzlHITc'],   // 単曲リピート再生 (https://youtu.be/gVxsLzlHITc)
+    "BGM": ['Ovbx-L5dCwY'],   // 単曲リピート再生 (https://youtu.be/Ovbx-L5dCwY)
     //"作業用": 'ここに再生リストID',
 };
 
@@ -315,19 +315,21 @@ infoButton.addEventListener("click", function() {
     alert("Webdeck Player - created by Chris\ngithub.com/cristiancfm/webdeck-player\n(c) MIT License");
 });
 
-function loadCurrentPlaylist() {
+// autoplay=true: すぐ再生 / autoplay=false(既定): キューのみ（無音で待機。ユーザーが再生ボタンを押すと鳴る）
+function loadCurrentPlaylist(autoplay) {
     var val = myPlaylists[currentPlaylist];
-    if (Array.isArray(val)) {
-        player.loadPlaylist(val);
+    var arg = Array.isArray(val) ? val : { list: val };
+    if (autoplay) {
+        player.loadPlaylist(arg);
     } else {
-        player.loadPlaylist({ list: val });
+        player.cuePlaylist(arg);
     }
 }
 
 playlistSelector.addEventListener("change", function() {
     currentPlaylist = playlistSelector.value;
     player.stopVideo();
-    loadCurrentPlaylist();
+    loadCurrentPlaylist(true);   // ユーザー操作での切替は再生する
 });
 
 themeSelector.addEventListener("change", function() {
@@ -347,7 +349,7 @@ themeSelector.addEventListener("change", function() {
 
 
 function onPlayerReady(event) {
-    loadCurrentPlaylist();
+    loadCurrentPlaylist(false);   // 初回はキューのみ（自動再生しない）
     player.setVolume(5);
     player.setLoop(true);
     // YT.Player が div を iframe に差し替えた後にも初期の表示状態（動画は非表示）を反映する
